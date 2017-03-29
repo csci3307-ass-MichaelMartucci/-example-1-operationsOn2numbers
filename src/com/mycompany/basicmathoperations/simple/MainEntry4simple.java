@@ -1,9 +1,7 @@
-/**
- * 
- */
+
 package com.mycompany.basicmathoperations.simple;
 
-import java.util.Arrays;
+
 import java.util.Scanner;
 
 /**
@@ -16,26 +14,50 @@ public class MainEntry4simple {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		System.out.println("BEF main of MainEntry4simple with args:" + args);
-		System.out.println("still main of MainEntry4simple with args:" + Arrays.toString(args));
 		
-		// get inputs
 		Scanner scanner = new Scanner(System.in);
-		int number1, number2;
-		float result;
-		// read number 1 and number 2 inputs
-		System.out.println("Enter number 1");
-		number1 = scanner.nextInt();
-		System.out.println("Enter number 2");
-		number2 = scanner.nextInt();
+		float number1, number2;
+		float resultm,resultd,resulta,results;
 		
 		// Multiply block
+		System.out.println("Enter number 1 for multiplication: ");
+		number1 = scanner.nextInt();
+		System.out.println("Enter number 2 for multiplication: ");
+		number2 = scanner.nextInt();
 		Multiply multiplier = new Multiply();
-		result = multiplier.multiply(number1, number2);
+		resultm = multiplier.multiply(number1, number2);
+		System.out.printf("result is %.2f%n", resultm);
 		
-		// print out result - NOTE %d is for int, %f is for float(and double), %.2f means 2 digits after decimal like 123.45
-		System.out.printf("result is %.2f%n", result);
+		//Divide block
+		System.out.println("Enter number 1 for Division: ");
+		number1 = scanner.nextInt();
+		System.out.println("Enter number 2 for Division: ");
+		number2 = scanner.nextInt();
+		Divide div=new Divide();
+		resultd = div.div(number1, number2);
+		System.out.printf("result is %.2f%n", resultd);
+		
+		//Add block
+		System.out.println("Enter number 1 for Addition: ");
+		number1 = scanner.nextInt();
+		System.out.println("Enter number 2 for Addition: ");
+		number2 = scanner.nextInt();
+		Add a=new Add();
+		resulta = a.add(number1, number2);
+		System.out.printf("result is %.2f%n", resulta);
+		
+		//sub block
+		System.out.println("Enter number 1 for Subtraction: ");
+		number1 = scanner.nextInt();
+		System.out.println("Enter number 2 for Subtraction: ");
+		number2 = scanner.nextInt();
+		Sub s=new Sub();
+		results = s.sub(number1, number2);
+		System.out.printf("result is %.2f%n", results);
 		scanner.close();
+		
+		
+
 	}
 
 }

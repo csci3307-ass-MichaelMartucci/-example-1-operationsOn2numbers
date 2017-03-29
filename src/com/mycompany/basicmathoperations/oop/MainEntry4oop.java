@@ -23,32 +23,57 @@ public class MainEntry4oop {
 		
 		Scanner scanner = new Scanner(System.in);
 		float number1, number2;
-		float result;
-		float result2;
-		// read number 1 and number 2 inputs
-		System.out.println("Enter number 1 for multiplication");
+		float resultm;
+		float resultd;
+		float resulta;
+		float results;
+		
+		// Multiply block
+		System.out.println("Enter number 1 for multiplication: ");
 		number1 = scanner.nextFloat();
-		System.out.println("Enter number 2 for multiplication");
+		System.out.println("Enter number 2 for multiplication: ");
 		number2 = scanner.nextFloat();
-		
-		// Multiply blo
-		
 		Multiply multiplier = new MultiplyOperatorFor2numbers(number1, number2);
-		result = multiplier.multiply(number1, number2);
-		System.out.printf("result:",result);
-		result = multiplier.multiply2numbers();
-		System.out.printf("result of multiply2numbers() is %.2f%n", result);		
-		//print out result - NOTE %d is for int, %f is for float(and double), %.2f means 2 digits after decimal like 123.45
+		resultm = multiplier.multiply2numbers();
+		System.out.printf("result:%.2f\n", resultm);	
 		
+	
 		
 		//Divide Block
-		Divide divider= new DivideOperatorFor2numbers();
-		result=divider.divide(number1,number2);
-		System.out.printf("result:")
-		System.out.println(result);
-		scanner.close();
+		System.out.println("Enter number 1 for Division: ");
+		number1 = scanner.nextFloat();
+		System.out.println("Enter number 2 for Division: ");
+		number2 = scanner.nextFloat();
+		Divide divider= new DivideOperatorFor2numbers(number1,number2);
+		resultd=divider.divide(number1,number2);
+		System.out.printf("result:%.2f\n",resultd);
+		
+		
+		//Additon Block
+		System.out.println("Enter number 1 for Addition: ");
+		number1 = scanner.nextFloat();
+		System.out.println("Enter number 2 for Addition: ");
+		number2 = scanner.nextFloat();
+		Addition adder=new AdditionOperatorFor2numbers(number1,number2);
+		resulta=adder.add(number1,number2);
+		System.out.printf("result:%.2f\n",resulta);
+		
+		
+		//subtract block
+		System.out.println("Enter number 1 for Subtraction: ");
+		number1 = scanner.nextFloat();
+		System.out.println("Enter number 2 for Subtraction: ");
+		number2 = scanner.nextFloat();
+		Subtraction sub=new SubtractionOperatorFor2numbers(number1,number2);
+		results=sub.sub(number1,number2);
+		System.out.printf("result:%.2f\n",results);
+		
 		}
 
 	}
+	
+	
+	
+	
 
 
