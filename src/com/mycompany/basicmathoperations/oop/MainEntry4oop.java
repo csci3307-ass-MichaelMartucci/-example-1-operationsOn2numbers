@@ -45,7 +45,7 @@ public class MainEntry4oop {
 		System.out.println("Enter number 2 for Division: ");
 		number2 = scanner.nextFloat();
 		Divide divider= new DivideOperatorFor2numbers(number1,number2);
-		resultd=divider.divide(number1,number2);
+		resultd=divider.divide2numbers();
 		System.out.printf("result:%.2f\n",resultd);
 		
 		
@@ -55,7 +55,7 @@ public class MainEntry4oop {
 		System.out.println("Enter number 2 for Addition: ");
 		number2 = scanner.nextFloat();
 		Addition adder=new AdditionOperatorFor2numbers(number1,number2);
-		resulta=adder.add(number1,number2);
+		resulta=adder.add2numbers();
 		System.out.printf("result:%.2f\n",resulta);
 		
 		
@@ -65,7 +65,7 @@ public class MainEntry4oop {
 		System.out.println("Enter number 2 for Subtraction: ");
 		number2 = scanner.nextFloat();
 		Subtraction sub=new SubtractionOperatorFor2numbers(number1,number2);
-		results=sub.sub(number1,number2);
+		results=sub.sub2numbers();
 		System.out.printf("result:%.2f\n",results);
 		
 		}
